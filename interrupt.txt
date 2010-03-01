@@ -1,0 +1,52 @@
+REVID		RevisionID		- Unwichtig
+CR		Control			- GLOBAL CONTROL	
+GER		Global Enable		- GLOBAL ENABLE
+
+SISR		SI Stat Indexed Set	- STATUS SYSTEMINTER SET INDEX
+SICR		SI Stat Indexed Clear	- STATUS SYSTEMINTER CLR INDEX
+SRSR[3]		SI Stat Raw Set		- STATUS SYSTEMINTER SET BIT
+SECR[3]		SI Stat Raw Clear	- STATUS SYSTEMINTER CLR BIT
+
+EISR		SI Enab	Indexed	Set	- ENABLE SYSTEMINTER SET INDEX
+EICR		SI Enab	Indexed Clear	- ENABLE SYSTEMINTER CLR INDEX
+ESR[3]		SI Enab Raw Set		- ENABLE SYSTEMINTER SET BIT
+ECR[3]		SI Enab Raw Clear	- ENABLE SYSTEMINTER SLR BIT
+
+-VBR		Vector Base		- VECTABLE
+-VSR		Vector Size		- VECTABLE
+-VNR		Vector Null		- VECTABLE
+
+GPIR		GLOBAL Priorized Index	- READ
+GPVR		GLOBAL Priorized Vector	- READ
+
+CMR[22] 	Channel Map		- CHANNEL MAPPING
+
+HIEISR		HOST Enab Indexed Set	- enable Host interrupt by index
+HIEICR		HOST Enab Indexed Clear	- clear host interrupt by index
+HIER		HOST Enab Raw 		- enable host interrupt by raw value
+
+HIPIR[2]	HOST Priorized Index	- priorized index host
+HIPVR[2]	Host Priorized Vector	- read
+
+HINLR[2]	HOST Nesting Level	- Nesting Level by index	
+GNLR		Global Nesting Level	-
+
+
+CR - 	0x00000008 	+ AUTOMATIC GLOBAL NESTING
+GER - 	0x00000001	+ Global interrupts enabled
+GNLR - 	0x00000100	+ Global Nesting Level 256
+	
+VBR - 	0x80003D84	+ Base address of ISRVEC
+VSR - 	0x00000000	+ VECSIZE = 4 BYTE
+VNR - 	0x80003D84	+ NULL VECTOR
+
+GPIR - 	0x80000000	+ 'NONE' bit set
+GPVR - 	0x80003D84	+ highest prior vect address
+SRSR - 	0x00000000	+ status
+ESR - 	0x01000000	+ enable set
+ECR - 	0x01000000	+ enabled
+CMR - 	0x00000018	+ interrupt 24 -> channel 0
+HIPIR - 0x80000000	+ None bit for pending
+HINLR - 0x00000100	+ Host interrupt ensting level 256
+HIER - 	0x00000003	+ Host interrupt enabled: FIQ IRQ
+HIPVR - 0x80003D84	+ Host interrupt higest prior vect address

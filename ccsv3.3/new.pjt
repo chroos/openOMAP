@@ -1,0 +1,35 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\Code\ARM\Projects\Begin\ccsv3.3\"
+ProjectType=Executable
+CPUFamily=TMS470R2X
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="Linker"
+Config="Debug"
+
+[Source Files]
+Source="..\src\arm_boot.asm"
+Source="..\src\arm_intvect.asm"
+Source="..\src\interrupt.c"
+Source="..\src\main.c"
+Source="..\src\omapl138.c"
+Source="..\src\omapl138_dip.c"
+Source="..\src\omapl138_i2c.c"
+Source="..\src\omapl138_i2c_gpio.c"
+Source="..\src\omapl138_led.c"
+Source="..\src\omapl138_timer.c"
+Source="..\src\omapl138_uart.c"
+Source="..\src\test_led_dip.c"
+Source="linker_arm.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -o3 -fr"$(Proj_dir)\Debug" -fs"$(Proj_dir)\Debug" -i"$(Proj_dir)\..\Include" -i"$(Proj_dir)\../../../Libraries/inc" -d"USE_IN_ROM" -d"CONFIG_MACH_DAVINCI_DA850_EVM" -me -ml -mv5e --abi=ti_arm9_abi
+
+["Linker" Settings: "Debug"]
+Options=-c -e_c_intOMAP -m".\Debug\new.map" -o".\Debug\new.out" -w -x -i"C:\CCStudio_v3.3\tms470\cgtools\lib" -i"D:\Code\ARM\Libraries" -l"rts32earm9.lib"
+
+["linker_arm.cmd" Settings: "Debug"]
+LinkOrder=1
+

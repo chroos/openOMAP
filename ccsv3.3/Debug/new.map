@@ -1,0 +1,405 @@
+******************************************************************************
+                  TMS470 Linker PC v4.5.2                      
+******************************************************************************
+>> Linked Mon Mar 01 19:43:23 2010
+
+OUTPUT FILE NAME:   <./Debug/new.out>
+ENTRY POINT SYMBOL: "_c_intOMAP"  address: 80000008
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  ENTRY_POINT           80000000   00000400  00000264  0000019c  RWIX
+  L3_RAM                80000400   00014bc4  0000c26d  00008957  RWIX
+  L3_RAM_DATA           80015000   00005000  00000000  00005000  RWIX
+  SDRAMEMIF3c_0         c0000000   01c00000  00000000  01c00000  RWIX
+  SDRAMEMIF3c_1         c1c00000   01400000  00000000  01400000  RWIX
+  SDRAMEMIF3c_2         c3000000   01400000  00000000  01400000  RWIX
+  SDRAMEMIF3c_3         c4400000   01400000  00000000  01400000  RWIX
+  SDRAMEMIF3c_4         c5800000   01400000  00000000  01400000  RWIX
+  SDRAMEMIF3c_5         c6c00000   01400000  00000000  01400000  RWIX
+  ARM_ROM               fffe0000   0000ffff  00000000  0000ffff  RWIX
+  ARM_RAM               ffff0000   000003ff  0000015c  000002a3  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.entryPoint 
+*          0    80000000    00000264     
+                  80000000    00000264     arm_boot.obj (.entryPoint)
+
+.text      0    80000400    000045cc     
+                  80000400    00001604     rts32earm9.lib : _printfi.obj (.text)
+                  80001a04    000007bc     main.obj (.text)
+                  800021c0    00000744     omapl138.obj (.text)
+                  80002904    0000042c     interrupt.obj (.text)
+                  80002d30    000003c4     omapl138_i2c_gpio.obj (.text)
+                  800030f4    000002e4     omapl138_uart.obj (.text)
+                  800033d8    000002d8     omapl138_timer.obj (.text)
+                  800036b0    000002a4     omapl138_i2c.obj (.text)
+                  80003954    0000028c     rts32earm9.lib : ull_div32.obj (.text)
+                  80003be0    000001d8                    : fd_add32.obj (.text)
+                  80003db8    00000190                    : fd_div32.obj (.text)
+                  80003f48    00000180                    : memcpy32.obj (.text)
+                  800040c8    00000128                    : fd_mul32.obj (.text)
+                  800041f0    00000100                    : i_div32.obj (.text)
+                  800042f0    000000e0                    : u_div32.obj (.text)
+                  800043d0    000000c0                    : fd_cmp32.obj (.text)
+                  80004490    000000a8                    : auto_init.obj (.text)
+                  80004538    000000a0                    : memset32.obj (.text)
+                  800045d8    0000009c                    : sprintf.obj (.text)
+                  80004674    00000084                    : ltoa.obj (.text)
+                  800046f8    00000080                    : atoi.obj (.text)
+                  80004778    00000078                    : exit.obj (.text)
+                  800047f0    0000005c                    : fd_toi32.obj (.text)
+                  8000484c    00000058                    : cpy_tbl.obj (.text)
+                  800048a4    00000044                    : boot.obj (.text)
+                  800048e8    0000003c                    : i_tofd32.obj (.text)
+                  80004924    00000028                    : memccpy.obj (.text)
+                  8000494c    00000024                    : _lock.obj (.text)
+                  80004970    00000020                    : args_main.obj (.text)
+                  80004990    00000020                    : icall32.obj (.text)
+                  800049b0    0000001c                    : strlen.obj (.text)
+
+.data      0    80000400    00000000     UNINITIALIZED
+
+.stack     0    800049cc    00002000     UNINITIALIZED
+                  800049cc    00002000     --HOLE--
+
+.astack    0    800069cc    00000400     UNINITIALIZED
+                  800069cc    00000400     arm_boot.obj (.astack)
+
+.fstack    0    80006dcc    00000400     UNINITIALIZED
+                  80006dcc    00000400     arm_boot.obj (.fstack)
+
+.istack    0    800071cc    00000400     UNINITIALIZED
+                  800071cc    00000400     arm_boot.obj (.istack)
+
+.sstack    0    800075cc    00000400     UNINITIALIZED
+                  800075cc    00000400     arm_boot.obj (.sstack)
+
+.ustack    0    800079cc    00000400     UNINITIALIZED
+                  800079cc    00000400     arm_boot.obj (.ustack)
+
+.const     0    80007dcc    00000101     
+                  80007dcc    00000101     rts32earm9.lib : ctype.obj (.const:__ctypes_)
+
+.cinit     0    80007ed0    00000058     
+                  80007ed0    00000018     rts32earm9.lib : _lock.obj (.cinit)
+                  80007ee8    00000018                    : exit.obj (.cinit)
+                  80007f00    0000000c     interrupt.obj (.cinit)
+                  80007f0c    0000000c     rts32earm9.lib : boot.obj (.cinit)
+                  80007f18    0000000c                    : stkdepth_vars.obj (.cinit)
+                  80007f24    00000004     --HOLE-- [fill = 0]
+
+.mmu_level_1_table 
+*          0    80008000    00004000     UNINITIALIZED
+                  80008000    00004000     arm_boot.obj (.mmu_level_1_table)
+
+.ystack    0    8000c000    00000400     UNINITIALIZED
+                  8000c000    00000400     arm_boot.obj (.ystack)
+
+.bss       0    8000c400    00000348     UNINITIALIZED
+                  8000c400    0000032c     interrupt.obj (.bss)
+                  8000c72c    00000008     rts32earm9.lib : _lock.obj (.bss)
+                  8000c734    00000008                    : exit.obj (.bss)
+                  8000c73c    00000004     omapl138_i2c.obj (.bss)
+                  8000c740    00000004     rts32earm9.lib : boot.obj (.bss)
+                  8000c744    00000004                    : stkdepth_vars.obj (.bss)
+
+.intvect   0    ffff0000    0000015c     
+                  ffff0000    00000154     arm_intvect.obj (.intvect)
+                  ffff0154    00000008     arm_boot.obj (.tramp._c_intOMAP.1)
+
+.entrytable 
+*          0    ffff015c    00000000     UNINITIALIZED
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+_c_intOMAP                $Tramp$AA$L$PI$$_c_intOMAP
+   80000008     ffff0154     ffff0074   arm_intvect.obj (.intvect)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+8000c400   .bss
+80000400   .data
+80000400   .text
+80004778   C$$EXIT
+80003f48   C_MEMCPY
+80003bec   FD_ADD
+800043d0   FD_CMP
+80003db8   FD_DIV
+800040c8   FD_MUL
+80003be0   FD_SUB
+800047f0   FD_TOI
+800041f0   I$DIV
+800041f0   I$MOD
+80004990   IND_CALL
+800041f4   I_DIV
+800041f4   I_MOD
+800048e8   I_TOFD
+800042f0   U$DIV
+800042f0   U$MOD
+80003954   ULL_DIV
+80003954   ULL_MOD
+800042f4   U_DIV
+800042f4   U_MOD
+80002c14   _ABORT_HANDLER
+80002880   _EVMOMAPL138_enableDsp
+800025fc   _EVMOMAPL138_init
+800024d4   _EVMOMAPL138_initRAM
+8000246c   _EVMOMAPL138_lpscTransition
+80002420   _EVMOMAPL138_pinmuxConfig
+80002b68   _FIQ_HANDLER
+80003014   _I2CGPIO_getInput
+80002f34   _I2CGPIO_getInputAll
+80002e7c   _I2CGPIO_init
+80002d88   _I2CGPIO_setOutput
+80002d30   _I2CGPIO_setOutputAll
+800036b0   _I2C_init
+80003840   _I2C_read
+80003770   _I2C_write
+80002b10   _INT_Channel_map
+80002a6c   _IRQ_HANDLER
+80002a1c   _IRQ_init_VTable
+80002a10   _IRQ_mapVTable
+8000c404   _ISR_VectorTable
+80002a0c   _ISR_undefined
+800029f4   _PREFETCH_HANDLER
+800029dc   _RESET_HANDLER
+800029c4   _SWI_HANDLER
+8000353c   _TIMER_init
+80002028   _Timer_Init
+80003250   _UART_init
+8000322c   _UART_rxByte
+8000311c   _UART_txArray
+800030f4   _UART_txByte
+800031e4   _UART_txString
+800031a4   _UART_txUint32
+80003164   _UART_txUint8
+800029ac   _UNDEFINED_HANDLER
+800034dc   _USTIMER_delay
+800034cc   _USTIMER_get
+80003428   _USTIMER_init
+800033fc   _USTIMER_reset
+800033ec   _USTIMER_set
+800023fc   _UTIL_isUIBoardAttached
+00000400   __A_STACK_SIZE
+00000400   __F_STACK_SIZE
+00000400   __I_STACK_SIZE
+00002000   __STACK_SIZE
+00000400   __S_STACK_SIZE
+80004490   __TI_auto_init
+00000400   __U_STACK_SIZE
+00000400   __Y_STACK_SIZE
+ffffffff   ___binit__
+8000c400   ___bss__
+ffffffff   ___c_args__
+80007ed0   ___cinit__
+80000400   ___data__
+80000400   ___edata__
+8000c748   ___end__
+800049cc   ___etext__
+ffffffff   ___pinit__
+80000400   ___text__
+80004970   __args_main
+8000c734   __cleanup_ptr
+80007dcc   __ctypes_
+8000c738   __dtors_ptr
+8000c72c   __lock
+80008000   __mmu_level_1_table
+80004964   __nop
+8000178c   __printfi
+80004958   __register_lock
+8000494c   __register_unlock
+800049cc   __stack
+8000c730   __unlock
+80004780   _abort
+800046f8   _atoi
+800048a4   _c_int00
+80000008   _c_intOMAP
+800022c0   _config_pll0
+800021c0   _config_pll1
+8000484c   _copy_in
+800001a0   _enableID_MMU
+80002998   _enableInterrupt
+8000478c   _exit
+80001af4   _getAddresses
+800033d8   _getTime
+80000088   _initStack
+80002904   _init_Interrupt
+80004674   _ltoa
+80001a04   _m_init
+80001f44   _main
+8000c744   _main_func_sp
+80004924   _memccpy
+80004538   _memset
+8000c400   _opCode
+800045d8   _sprintf
+8000c740   _stkchk_called
+800049b0   _strlen
+ffff0034   _vec_abort_handler
+ffff0020   _vec_fiq_handler
+ffff003c   _vec_irq_handler
+ffff0030   _vec_prefetch_handler
+ffff0038   _vec_reserved_handler
+ffff0024   _vec_reset_handler
+ffff002c   _vec_swi_handler
+ffff0028   _vec_undefined_handler
+ffffffff   binit
+80007ed0   cinit
+80000400   edata
+8000c748   end
+800049cc   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000400   __A_STACK_SIZE
+00000400   __F_STACK_SIZE
+00000400   __I_STACK_SIZE
+00000400   __S_STACK_SIZE
+00000400   __U_STACK_SIZE
+00000400   __Y_STACK_SIZE
+00002000   __STACK_SIZE
+80000008   _c_intOMAP
+80000088   _initStack
+800001a0   _enableID_MMU
+80000400   .data
+80000400   .text
+80000400   ___data__
+80000400   ___edata__
+80000400   ___text__
+80000400   edata
+8000178c   __printfi
+80001a04   _m_init
+80001af4   _getAddresses
+80001f44   _main
+80002028   _Timer_Init
+800021c0   _config_pll1
+800022c0   _config_pll0
+800023fc   _UTIL_isUIBoardAttached
+80002420   _EVMOMAPL138_pinmuxConfig
+8000246c   _EVMOMAPL138_lpscTransition
+800024d4   _EVMOMAPL138_initRAM
+800025fc   _EVMOMAPL138_init
+80002880   _EVMOMAPL138_enableDsp
+80002904   _init_Interrupt
+80002998   _enableInterrupt
+800029ac   _UNDEFINED_HANDLER
+800029c4   _SWI_HANDLER
+800029dc   _RESET_HANDLER
+800029f4   _PREFETCH_HANDLER
+80002a0c   _ISR_undefined
+80002a10   _IRQ_mapVTable
+80002a1c   _IRQ_init_VTable
+80002a6c   _IRQ_HANDLER
+80002b10   _INT_Channel_map
+80002b68   _FIQ_HANDLER
+80002c14   _ABORT_HANDLER
+80002d30   _I2CGPIO_setOutputAll
+80002d88   _I2CGPIO_setOutput
+80002e7c   _I2CGPIO_init
+80002f34   _I2CGPIO_getInputAll
+80003014   _I2CGPIO_getInput
+800030f4   _UART_txByte
+8000311c   _UART_txArray
+80003164   _UART_txUint8
+800031a4   _UART_txUint32
+800031e4   _UART_txString
+8000322c   _UART_rxByte
+80003250   _UART_init
+800033d8   _getTime
+800033ec   _USTIMER_set
+800033fc   _USTIMER_reset
+80003428   _USTIMER_init
+800034cc   _USTIMER_get
+800034dc   _USTIMER_delay
+8000353c   _TIMER_init
+800036b0   _I2C_init
+80003770   _I2C_write
+80003840   _I2C_read
+80003954   ULL_DIV
+80003954   ULL_MOD
+80003be0   FD_SUB
+80003bec   FD_ADD
+80003db8   FD_DIV
+80003f48   C_MEMCPY
+800040c8   FD_MUL
+800041f0   I$DIV
+800041f0   I$MOD
+800041f4   I_DIV
+800041f4   I_MOD
+800042f0   U$DIV
+800042f0   U$MOD
+800042f4   U_DIV
+800042f4   U_MOD
+800043d0   FD_CMP
+80004490   __TI_auto_init
+80004538   _memset
+800045d8   _sprintf
+80004674   _ltoa
+800046f8   _atoi
+80004778   C$$EXIT
+80004780   _abort
+8000478c   _exit
+800047f0   FD_TOI
+8000484c   _copy_in
+800048a4   _c_int00
+800048e8   I_TOFD
+80004924   _memccpy
+8000494c   __register_unlock
+80004958   __register_lock
+80004964   __nop
+80004970   __args_main
+80004990   IND_CALL
+800049b0   _strlen
+800049cc   ___etext__
+800049cc   __stack
+800049cc   etext
+80007dcc   __ctypes_
+80007ed0   ___cinit__
+80007ed0   cinit
+80008000   __mmu_level_1_table
+8000c400   .bss
+8000c400   ___bss__
+8000c400   _opCode
+8000c404   _ISR_VectorTable
+8000c72c   __lock
+8000c730   __unlock
+8000c734   __cleanup_ptr
+8000c738   __dtors_ptr
+8000c740   _stkchk_called
+8000c744   _main_func_sp
+8000c748   ___end__
+8000c748   end
+ffff0020   _vec_fiq_handler
+ffff0024   _vec_reset_handler
+ffff0028   _vec_undefined_handler
+ffff002c   _vec_swi_handler
+ffff0030   _vec_prefetch_handler
+ffff0034   _vec_abort_handler
+ffff0038   _vec_reserved_handler
+ffff003c   _vec_irq_handler
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[131 symbols]

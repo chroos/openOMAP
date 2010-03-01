@@ -1,0 +1,9 @@
+------------------------------  new.pjt - Debug  ------------------------------
+[arm_intvect.asm] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -g -o3 -fr"D:/Code/ARM/Projects/Begin/ccsv3.3/Debug" -fs"D:/Code/ARM/Projects/Begin/ccsv3.3/Debug" -i"D:/Code/ARM/Projects/Begin/ccsv3.3/../Include" -i"D:/Code/ARM/Projects/Begin/ccsv3.3/../../../Libraries/inc" -d"USE_IN_ROM" -d"CONFIG_MACH_DAVINCI_DA850_EVM" -me -ml -mv5e --abi=ti_arm9_abi -@"../ccsv3.3/Debug.lkf" "arm_intvect.asm"
+
+[Linking...] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -@"Debug.lkf"
+<Linking>
+warning: entry-point symbol other than "_c_int00" specified:  "_c_intOMAP"
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.
